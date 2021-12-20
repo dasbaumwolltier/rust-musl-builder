@@ -1,5 +1,5 @@
 # Use Ubuntu 18.04 LTS as our base image.
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # The Rust toolchain to use when building our image.  Set by `hooks/build`.
 ARG TOOLCHAIN=stable
@@ -9,7 +9,7 @@ ARG TOOLCHAIN=stable
 # - https://www.openssl.org/source/
 #
 # ALSO UPDATE hooks/build!
-ARG OPENSSL_VERSION=1.1.1i
+ARG OPENSSL_VERSION=1.1.1m
 
 # Versions for other dependencies. Here are the places to check for new
 # releases:
@@ -22,9 +22,9 @@ ARG OPENSSL_VERSION=1.1.1i
 #
 # We're stuck on PostgreSQL 11 until we figure out
 # https://github.com/emk/rust-musl-builder/issues.
-ARG MDBOOK_VERSION=0.4.6
-ARG CARGO_ABOUT_VERSION=0.2.3
-ARG CARGO_DENY_VERSION=0.8.5
+ARG MDBOOK_VERSION=0.4.14
+ARG CARGO_ABOUT_VERSION=0.4.3
+ARG CARGO_DENY_VERSION=0.11.0
 ARG ZLIB_VERSION=1.2.11
 ARG POSTGRESQL_VERSION=11.11
 
